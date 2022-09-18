@@ -20,6 +20,7 @@
     overflow: hidden;
     transition: all 0.20s ease-in;
     cursor: pointer;
+    
 }
 
 .card:hover{
@@ -35,6 +36,3 @@
     color: #8c8c8e;
 }
 
-#idcard{
-    display: flex;
-}

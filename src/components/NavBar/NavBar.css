@@ -1,28 +1,35 @@
 .navbar {
     background: #6c7c69;
     text-align: center;
-    height: 130px;
+    height: 100px;
     float: right;
     width: 100%;
     margin: none;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
     transition: width 3s, height 4s;
     text-decoration: none;
     color: #FFFFFF;
   }
 .navbar li:hover {
-    transform: scale(1.5, 1.5);
+    transform: scale(1.2, 1.2);
+    border-left: solid 1px;
+
   }
   .navbar ul {
-    font-size: 20px;   
+    font-size: 17px;   
     text-align: center;
-    float: right;
     margin: none;
-    padding: 25px 5px 0px 0px;
+    padding-top: 4px;
   }
   
   .navbar li {
     display: inline-block;
-    padding: 1rem;
+    padding: 0.7rem;
     margin: none;
+  }
+  .cartshopping{
+    width: 110%;
+}
+  .cartshopping:hover{
+    transform: scale(1.2, 1.2);
   }

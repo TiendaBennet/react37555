@@ -1,4 +1,6 @@
 import "./NavBar.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCartShopping }  from "@fortawesome/free-solid-svg-icons";
 
 function NavBar() {
     return(
@@ -11,8 +13,8 @@ function NavBar() {
                 <li class="className"><a target="_blank">Tablones</a></li>
                 <li class="className"><a target="_blank">Revestimientos PVC</a></li>
                 <li class="className"><a target="_blank">Contacto</a></li>
+                <li><FontAwesomeIcon className="cartshopping" icon={ faCartShopping } /> </li>
             </ul>
-            <i class="header-icono fas fa-bars"></i>
         </nav>
         );
 }

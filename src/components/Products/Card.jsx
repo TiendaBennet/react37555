@@ -1,4 +1,5 @@
 import React from "react"
+import Button from "../Button/Button";
 import "./card.css";
 
 function Card(props) {
@@ -12,7 +13,7 @@ function Card(props) {
                 <p>Tabla Revestimiento PVC por 250mm de ancho. Precio por ml.</p>
                 <h4>$ {props.price}</h4>
             </div>
-            <a href="#">Ver más</a>
+            <Button text="Ver más"/>
         </div>
     );
 }
