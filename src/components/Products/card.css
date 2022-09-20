@@ -1,3 +1,13 @@
+h1{
+    font-family: "Roboto";
+    color: #404040;
+    font-size: 35px;
+    letter-spacing: 0.8px;
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 25px;
+}
+
 .card-img{
     width: 280px;
     height: 260px;
@@ -10,6 +20,9 @@
     object-fit: contain;
 }
 .card{
+    display: inline-block;
+    justify-content: space-around;
+    align-items: center;
     margin: 10px 15px;
     min-height: 600px;
     width: 280px;
@@ -30,6 +43,7 @@
 
 .card-detail{
     padding: 12px 8px;
+    align-items: center;
 }
 
 .small{

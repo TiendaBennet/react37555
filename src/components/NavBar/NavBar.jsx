@@ -1,6 +1,6 @@
-import "./NavBar.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping }  from "@fortawesome/free-solid-svg-icons";
+import "./navBar.css";
+import CartWidget from "./CartWidget";
+
 
 function NavBar() {
     return(
@@ -12,9 +12,9 @@ function NavBar() {
                 <li class="className"><a target="_blank">Piedras</a></li>
                 <li class="className"><a target="_blank">Tablones</a></li>
                 <li class="className"><a target="_blank">Revestimientos PVC</a></li>
-                <li class="className"><a target="_blank">Contacto</a></li>
-                <li><FontAwesomeIcon className="cartshopping" icon={ faCartShopping } /> </li>
+                <li class="className"><a target="_blank">Contacto</a></li>     
             </ul>
+            <div><CartWidget /></div>
         </nav>
         );
 }
