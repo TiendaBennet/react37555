@@ -13,9 +13,13 @@ function Card(props) {
                 <h3>{props.title}</h3>
                 <p>Tabla Revestimiento PVC por 250mm de ancho. Precio por ml.</p>
                 <h4>$ {props.price}</h4>
+                <div>
                 <Button text="Ver más"/>
+                </div>
             </div>
-            <ItemCount />
+            <div>
+            <ItemCount initial={props.initial} stock={props.stock}/>
+            </div>
         </div>
     );
 }

@@ -1,8 +1,11 @@
 .btn{
-    padding: 5px 10px 5px;
+    padding: 5px 17px 7px 20px;
     color: rgb(247, 245, 243);
     max-width: 150px;
     background-color: #6c7c69;
     border-radius: 5px;
+    display: inline-flex;
  
 }
+.btn:hover {
+    transform: scale(1.2, 1.2); }
