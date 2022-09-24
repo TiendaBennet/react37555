@@ -3,6 +3,7 @@ import './App.css';
 import NavBar from "./components/NavBar/NavBar";
 import Products from './components/Products/Products';
 import Footer from './components/Footer/Footer';
+import mockAPI from '.services/mockAPI';
 
 function App() {
   return (

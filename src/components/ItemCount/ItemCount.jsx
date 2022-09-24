@@ -21,6 +21,7 @@ function handleAdd(){
   //let cenas = parseInt(price.innerText) + parseInt(count.value);
      
 //}
+// function handleCarrito al boton 
 
   return (
     <div className="quantity">
