@@ -1,3 +1,9 @@
+//   async mock (promise): Usa un efecto de montaje para poder emitir 
+//   un llamado asincrónico a un mock (objeto) estático de datos que devuelva 
+//   un conjunto de item { id, title, description, price, pictureUrl } 
+//   en dos segundos (setTimeout), para emular retrasos de red.
+
+
 const data = [{
     categoria: "Techos y Revestimientos",
     intracategoria: "tablas",

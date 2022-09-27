@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import FlexWrapper from '../FlexWrapper/FlexWrapper';
-import Card from "./Card";
-import { getItems } from '../../services/mockAPI';
+import Item from "./Item";
+import getItems from '../../services/mockAPI';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from "./ItemList";
 
@@ -10,7 +10,7 @@ function Products() {
 
 useEffect (
   () => {
-  getItems().then((respuestaDatos) => setData(respuestaDatos));
+  getItems().then((respuestaDatos) => setData(respuestaDatos)); //se pide una vez los datos, y los seteamos una vez
   },
   []
   ); 

@@ -1,13 +1,16 @@
 import React from 'react'
-import Card from "./Card";
+import Item from "./Item";
 
+//   ItemList.js 
+//   Es un agrupador de un set de componentes Item.js 
 
-function ItemList(props) {
+//map de datos 
+function ItemList(props) { //que reciba las props
   return (
     <div>
         {props.data.map((item)=> {        
             return (
-                <Card
+                <Item
                     key={item.sku} //necesario para ordenar a React. 
                     img={item.img}
                     title={item.title}

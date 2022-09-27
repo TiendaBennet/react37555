@@ -3,8 +3,13 @@ import Button from "../Button/Button";
 import ItemCount from "../ItemCount/ItemCount";
 import "./card.css";
 
-function Card(props) {
-    let { img, title, descripcion, price } = props;
+// ITEM.js :
+// Es un componente destinado a mostrar información breve del producto
+// que el user clickeará luego para acceder a los detalles.
+// Antes se llamaba Card, referenciando a la tarjeta del producto
+
+function Item(props) {
+    let { img, title, descripcion, price, stock } = props;
     return (
         <div className="card">
             <div className="card-img">
@@ -25,4 +30,4 @@ function Card(props) {
     );
 }
 
-export default Card;
+export default Item;
