@@ -94,4 +94,56 @@ export default function getItems() {
 
     });
 }  
-  
+
+
+export function getItemsByCategory(cat) { //le creo una nueva funcion 
+  return new Promise( (reslove, reject) => {
+        let itemFind = data.filter((item) => { 
+          return item.categoria === cat;
+        });
+        setTimeout( () => {
+ 
+        if (itemFind) reslove (itemFind);
+        else reject (new Error("item no encontrado"));
+          //reslove(data[1]); //de todo el array que me traiga el primero 
+      }, 1500);
+
+  });
+} 
+
+
+
+
+export function getSingleItem(sku) { //le creo una nueva funcion 
+  return new Promise( (reslove, reject) => {
+        let itemFind = data.find((item) => { 
+          return item.sku === (sku);
+        });
+        setTimeout( () => {
+ 
+        if (itemFind) reslove (itemFind);
+        else reject (new Error("item no encontrado"));
+          //reslove(data[1]); //de todo el array que me traiga el primero 
+      }, 1500);
+
+  });
+} 
+
+// utilizar metodo find para buscar en este array el item en base al id que sera lo 
+// que se busque en el navegador
+
+//export function getSingleItem( idItem) { //funcion para recibir el item por id
+ // return new Promise( (reslove, reject) => {
+//      setTimeout( () => {
+ //       let itemFind = data.find( item => item.id === idItem ) //encontrar en el array, por cada 
+        //item que haya que cumpla con la siguiente condicion => "item.id === idItem" , es decir lo
+        // que se busque igual al cual identifico. Me guarda el item con let itemFind.
+        
+ //       if(itemFind)
+//          reslove (itemFind); //resolvemos lo anterior.
+//        else
+//          reject(new Error("item no encontrado"))
+//      }, 1500);
+
+//  });
+//} 

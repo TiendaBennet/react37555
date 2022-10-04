@@ -1,17 +1,22 @@
 import React, { useState, useEffect } from "react";
 import FlexWrapper from '../FlexWrapper/FlexWrapper';
-import Item from "./Item";
 import getItems from '../../services/mockAPI';
 import ItemCount from '../ItemCount/ItemCount';
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 
 function Products() {
   let [data, setData] = useState([]); 
-
+  const {cat} = useParams(); 
 useEffect (
   () => {
+    if (cat === undefined ) {
   getItems().then((respuestaDatos) => setData(respuestaDatos)); //se pide una vez los datos, y los seteamos una vez
-  },
+  }   
+    else {
+      getItems().then((respuestaDatos) => setData(respuestaDatos)); //se pide una vez los datos, y los seteamos una vez
+      }  
+},
   []
   ); 
 

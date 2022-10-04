@@ -11,7 +11,8 @@ function ItemList(props) { //que reciba las props
         {props.data.map((item)=> {        
             return (
                 <Item
-                    key={item.sku} //necesario para ordenar a React. 
+                    key={item.sku} //necesario para ordenar a React.
+                    sku={item.sku} 
                     img={item.img}
                     title={item.title}
                     descripcion={item.descripcion}
