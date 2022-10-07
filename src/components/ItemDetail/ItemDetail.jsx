@@ -29,7 +29,7 @@ function ItemDetail(props) {
                     <img className="item-detail__image" src={props.img} alt={props.title} />
                 </div>
                 <div className="item-detail__detail-container">
-                    <p>
+                    <p className='descripcion'>
                         {props.descripcion}
                     </p>
                 </div>
