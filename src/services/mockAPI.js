@@ -5,9 +5,9 @@
 
 
 const data = [{
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
-    sku: "SP250B",
+    sku: "SP250B", 
     denominacion: "Revestimiento Texturado 9mm espesor",
     title: "Blanco",
     descripcion:"Tabla Revestimiento PVC por 250mm de ancho. price por ml.",
@@ -15,7 +15,7 @@ const data = [{
     stock: 3695,
     img: "/assets/blanco-resize.jpg",
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250F",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -25,7 +25,7 @@ const data = [{
     stock: 4920,
     img: "/assets/fresno-resize.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250H",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -35,7 +35,7 @@ const data = [{
     stock: 8646,
     img: "https://tiendabennet.com.ar/wp-content/uploads/2022/03/Haya-resize-scaled.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250N",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -45,7 +45,7 @@ const data = [{
     stock: 4115,
     img: "/assets/nogal-resize.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250M",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -55,7 +55,7 @@ const data = [{
     stock: 7376,
     img: "https://tiendabennet.com.ar/wp-content/uploads/2022/03/Madera-resize-300x169.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250V",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -65,7 +65,7 @@ const data = [{
     stock: 5957,
     img: "/assets/vintage-resize.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250GM",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -75,7 +75,7 @@ const data = [{
     stock: 9789,
     img: "/assets/mina-resize.jpg"
   }, {
-    categoria: "Techos y Revestimientos",
+    categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250G",
     denominacion: "Revestimiento Texturado 9mm espesor",
@@ -84,7 +84,31 @@ const data = [{
     price: 900.00,
     stock: 8145,
     img: "/assets/grafito-resize.jpg"
-  }];
+  },{
+    categoria: "Aberturas",
+    intracategoria: "tablas",
+    sku: "SP250G",
+    denominacion: "Revestimiento Texturado 9mm espesor",
+    title: "Grafito",
+    descripcion:"Tabla Revestimiento PVC por 250mm de ancho. price por ml.",
+    price: 900.00,
+    stock: 8145,
+    img: "/assets/grafito-resize.jpg"
+  },  {
+    categoria: "WPC",
+    intracategoria: "tablas",
+    sku: "SP250G",
+    denominacion: "Revestimiento Texturado 9mm espesor",
+    title: "Grafito",
+    descripcion:"Tabla Revestimiento PVC por 250mm de ancho. price por ml.",
+    price: 900.00,
+    stock: 8145,
+    img: "/assets/grafito-resize.jpg"
+  }
+
+
+
+];
 
 export default function getItems() {
     return new Promise( (reslove, reject) => {
@@ -113,11 +137,11 @@ export function getItemsByCategory(cat) { //le creo una nueva funcion
 
 
 
-
-export function getSingleItem(sku) { //le creo una nueva funcion 
+                          //(idItem)
+export function getSingleItem(skuItem) { //le creo una nueva funcion 
   return new Promise( (reslove, reject) => {
         let itemFind = data.find((item) => { 
-          return item.sku === (sku);
+          return item.sku === (skuItem);
         });
         setTimeout( () => {
  
@@ -128,6 +152,21 @@ export function getSingleItem(sku) { //le creo una nueva funcion
 
   });
 } 
+
+export function getItemsByType(type){
+  return new Promise((resolve, reject) => {
+      let itemFind = data.filter((item) => {
+          return item.tipo === type
+      })
+      setTimeout(() => {
+          if (itemFind) { 
+              resolve(itemFind)
+          } else {
+              reject(new Error("Item no encontrado"))
+          }
+      }, 1500)
+  })
+}
 
 // utilizar metodo find para buscar en este array el item en base al id que sera lo 
 // que se busque en el navegador

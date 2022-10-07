@@ -32,7 +32,7 @@ h4{
     justify-content: space-around;
     align-items: center;
     margin: 10px 15px;
-    min-height: 600px;
+    min-height: 400px;
     width: 280px;
     height: 100%;
     border-radius: 4px;
@@ -64,3 +64,25 @@ h4{
     align-items: center;
 }
 
+/*
+*/
+.item-list__container {
+    display: flex;
+    flex-direction: column;
+    /* height: calc(100vh - (10rem)); */
+}
+
+.item-list__outer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.item-list__inner {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
+}

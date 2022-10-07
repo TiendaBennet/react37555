@@ -1,29 +1,27 @@
-import logo from './logo.png';
 import './App.css';
-import NavBar from "./components/NavBar/NavBar";
-import Products from './components/Products/Products';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header/Header';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
-
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom"; 
+import Footer from './components/Footer/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom"; 
+import MyProvider from './context/CartContext';
 
 function App() {
   return (
     <BrowserRouter>
-    <div className="App">
-      <header className="App-header">
-        <Link to='/'><img src={logo} className="App-logo" alt="logo" /></Link>
-      </header>
-      <NavBar className="App-NavBar"></NavBar>
-      <Routes>
-        <Route path='/' element=  // el path es la url, la "/" atribuye al local host
-          { <Products greeting="Revestimientos y Accesorios"/> } />
-        <Route path='/categoria/:cat' element= {  
-          <Products />} />
-        <Route path='/revestimientos/:sku' element= {<ItemDetailContainer /> } />
-        <Route path='*' element= { <h1>404: Te perdiste</h1> } /></Routes>
+      <div className='app__container'>
+        <MyProvider>
+        <Header />
+      <Routes>   {/* el path es la url, la "/" atribuye al local host*/}
+          <Route path='/' element={ <ItemListContainer greeting="Revestimientos y Accesorios"/> } />
+          <Route path='/categoria/:cat' element= { <ItemListContainer />} />
+          <Route path='/type/:type' element= { <ItemListContainer />} />
+          <Route path='/producto/:sku' element= {<ItemDetailContainer /> } />
+          <Route path="/cart" element={ <h2>cart</h2>} />
+        </Routes>
+        </MyProvider>
+        </div>
       <Footer />
-    </div>
     </BrowserRouter>
 );
 }
