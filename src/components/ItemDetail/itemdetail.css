@@ -91,6 +91,10 @@
 .item-detail__image-nutri {
     width: 25rem;
 }
+.descripcion{
+    color: black;
+}
+
 
 /* --- Media querys --- */
 @media screen and (max-width: 1093px) {

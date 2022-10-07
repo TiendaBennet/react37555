@@ -1,3 +1,8 @@
+.cartshopping{
+    color: #FFFFFF;
+    scale: 1.5;
+}
+
 .cart-widget__container {
     display: flex;
     align-content: center;

@@ -1,4 +1,4 @@
-import logo from './../../assetsbennet/logo.png'
+import logo from './../../assetsbennet/logoBennet.png'
 import './header.css';
 import NavBar from '../NavBar/NavBar'
 import { Link } from "react-router-dom";

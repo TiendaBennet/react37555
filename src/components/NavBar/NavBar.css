@@ -70,10 +70,10 @@ nav.App-header__nav ul li {
 
 }
 nav.App-header__nav li a {
-  color: rgb(1, 4, 0);
+  color: #6c7c69;
 }
 nav.App-header__nav li a:hover {
-  color: rgb(74, 158, 70);
+  color: #58b6e6;
 }
 nav.App-header__nav li:hover {
   cursor: pointer;
@@ -114,23 +114,24 @@ ul li ul li a {
 }
 
 .nav__titles {
-  font-family: LouisGeorgeBold;
+  font-family: "Roboto";
   text-decoration: none;
   font-size: 1.1rem;
   padding: 0px;
-  color:rgb(109, 115, 97);
+  color: #FFFFFF;
   text-transform: none;
-  letter-spacing: 1px !important;
+ /* letter-spacing: 1px !important;*/
   line-height: 1.5;
 }
 .nav__titles:hover {
-  color:rgb(74, 158, 70);
-  animation: hoverlinks 200ms ease-in;
+  transform: scale(1.2, 1.2);
+  border-left: solid 1px;
+  animation: hoverlinks 100ms ease-in;
 }
 
 @keyframes hoverlinks {
   from { color:rgb(109, 115, 97);}
-  to { color: rgb(74, 158, 70);}
+  to { color: #58b6e6;}
 }
 
 @media screen and (max-width: 1080px) {

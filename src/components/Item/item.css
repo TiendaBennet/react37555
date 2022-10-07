@@ -5,12 +5,13 @@
     border-width: 1px;
     border-color: rgba(1, 2, 1, 0.065) !important;
     box-shadow: 0px 0px 0px 0px rgb(1,1,1);
-    background-color:rgb(216, 221, 216)
+    background-color:#6c7c69c5;
+    border-radius: 4px;
 }
 .card-container:hover {
     position: relative;
     bottom: 3px;
-    box-shadow: 0px 0px 2px 0px rgb(1,1,1);
+    box-shadow: 0px 0px 2px 0px #6c7c69;
     animation: hovercard 100ms ease-out;
 }
 
@@ -51,7 +52,10 @@
     max-height: 12rem;
     border-bottom-style: solid;
     border-bottom-width: 1px;
-    border-bottom-color: rgb(24, 145, 24) !important;
+    border-bottom-color: rgb(23, 29, 23);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: rgb(23, 29, 23);
     -webkit-filter: drop-shadow(5px 5px 5px #031a0757);
     filter: drop-shadow(5px 5px 5px #031a0743);
 }
