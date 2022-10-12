@@ -4,7 +4,7 @@ import logo from './../../assetsbennet/logo.png'
 
 function Item(props){
     let {price, title, img, stock} = props
-    const urlProducto = `/producto/${props.sku}`
+    const urlProducto = `/producto/${props.id}`
     
     return (
         <Link to={urlProducto} className="card-container">

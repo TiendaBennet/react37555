@@ -5,48 +5,61 @@ import './itemlist.css'
 import {useParams} from 'react-router-dom'
 import { getItemsByCategory } from '../../services/mockAPI'
 import {getItemsByType } from '../../services/mockAPI'
+import Loader from '../Loader/Loader'
 
 function ItemList(){
     let [data, setData] = useState([])
+    const [isLoading, setIsLoading] = useState(true)
     let { cat, type } = useParams()
 
     useEffect(()=> {
         if(cat === undefined ) {
-            getItems().then( (respuestaDatos) => setData(respuestaDatos))
+            getItems()
+                .then( (respuestaDatos) => setData(respuestaDatos))
+                .finally(() => setIsLoading(false))
         } else {
-            getItemsByCategory(cat).then((respuestaDatos) =>  setData(respuestaDatos))
+            getItemsByCategory(cat)
+                .then((respuestaDatos) =>  setData(respuestaDatos))
+                .finally(() => setIsLoading(false))
         }
     }, [cat])
 
     useEffect(()=> {
         if(type === undefined ) {
-            getItems().then( (respuestaDatos) => setData(respuestaDatos))
+            getItems()
+            .then( (respuestaDatos) => setData(respuestaDatos))
+            .finally(() => setIsLoading(false))
         } else {
-            getItemsByType(type).then((respuestaDatos) =>  setData(respuestaDatos))
+            getItemsByType(type)
+                .then((respuestaDatos) =>  setData(respuestaDatos))
+                .finally(() => setIsLoading(false))
         }
     }, [type])
     
-
+    
 
     return(
         <div className="item-list__inner">
+            {isLoading && <Loader/>}
             {
             data.map((item)=> {
                 return (
                     <Item
-                        id={item.sku}
-                        key={item.sku}
+                        id={item.id}
+                        key={item.id}
                         price={item.price}
                         title={item.title}
                         denominacion={item.denominacion}
                         img={item.img}
                         stock={item.stock}
-                    />
-                )
-            })
-            }
-        </div>
-    )
-}
+                        />
+                        )
+                    })
+                    }
+                    
+                </div>
+            )
+        }
+        
 
 export default ItemList

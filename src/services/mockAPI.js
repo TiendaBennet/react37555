@@ -5,6 +5,7 @@
 
 
 const data = [{
+    id: 1,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250B", 
@@ -15,6 +16,7 @@ const data = [{
     stock: 3695,
     img: "/assets/blanco-resize.jpg",
   }, {
+    id: 2,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250F",
@@ -25,6 +27,7 @@ const data = [{
     stock: 4920,
     img: "/assets/fresno-resize.jpg"
   }, {
+    id:3,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250H",
@@ -35,6 +38,7 @@ const data = [{
     stock: 8646,
     img: "https://tiendabennet.com.ar/wp-content/uploads/2022/03/Haya-resize-scaled.jpg"
   }, {
+    id:4,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250N",
@@ -45,6 +49,7 @@ const data = [{
     stock: 4115,
     img: "/assets/nogal-resize.jpg"
   }, {
+    id:5,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250M",
@@ -55,6 +60,7 @@ const data = [{
     stock: 7376,
     img: "https://tiendabennet.com.ar/wp-content/uploads/2022/03/Madera-resize-300x169.jpg"
   }, {
+    id:6,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250V",
@@ -65,6 +71,7 @@ const data = [{
     stock: 5957,
     img: "/assets/vintage-resize.jpg"
   }, {
+    id:7,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250GM",
@@ -75,6 +82,7 @@ const data = [{
     stock: 9789,
     img: "/assets/mina-resize.jpg"
   }, {
+    id:8,
     categoria: "Revestimientos",
     intracategoria: "tablas",
     sku: "SP250G",
@@ -85,6 +93,7 @@ const data = [{
     stock: 8145,
     img: "/assets/grafito-resize.jpg"
   },{
+    id:9,
     categoria: "Aberturas",
     intracategoria: "tablas",
     sku: "SP250G",
@@ -95,6 +104,7 @@ const data = [{
     stock: 8145,
     img: "/assets/grafito-resize.jpg"
   },  {
+    id:10,
     categoria: "WPC",
     intracategoria: "tablas",
     sku: "SP250G",
@@ -138,10 +148,10 @@ export function getItemsByCategory(cat) { //le creo una nueva funcion
 
 
                           //(idItem)
-export function getSingleItem(skuItem) { //le creo una nueva funcion 
+export function getSingleItem(idItem) { //le creo una nueva funcion 
   return new Promise( (reslove, reject) => {
         let itemFind = data.find((item) => { 
-          return item.sku === (skuItem);
+          return item.id === (idItem);
         });
         setTimeout( () => {
  

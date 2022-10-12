@@ -3,21 +3,33 @@ import './itemdetailcontainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
 import { getSingleItem } from '../../services/mockAPI'
 import {useParams} from 'react-router-dom'
+import Loader from '../Loader/Loader'
 
 
 function ItemDetailContainer() {
-    let [data, setData] = useState({}); 
+    const [data, setData] = useState({}); 
+    const [error, setError] = useState(false)
     const params = useParams()
-    const sku = params.sku
+    const id = params.id
     useEffect(() => {
-        getSingleItem(sku).then((respuestaDatos) => setData(respuestaDatos))
-    }, [sku]) 
+        getSingleItem(id)
+            .then((respuestaDatos) => setData(respuestaDatos))
+            .catch((errormsg) => setError(errormsg.message))
+    }, [id]) 
 
+    if (!data.title) { 
+        return (
+        <div>
+            {error ? <h2>{error}</h2> : <Loader/>}
+        </div>
+        ) 
+    }
 
     return (
-        <div className='item-detail__container'>
+        <>
+            <div className='item-detail__container'>
             <ItemDetail
-                sku={data.sku}
+                id={data.id}
                 title={data.title}
                 denominacion={data.denominacion}
                 img={data.img}
@@ -25,7 +37,8 @@ function ItemDetailContainer() {
                 price={data.price}
                 descripcion={data.descripcion}
                 />
-        </div> 
+        </div>
+        </> 
     )
 }
 export default ItemDetailContainer

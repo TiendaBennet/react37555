@@ -1,7 +1,9 @@
 import './addtocart.css'
 import { useState } from 'react';
+import RemoveIcon from '@mui/icons-material/Remove';
+import AddIcon from '@mui/icons-material/Add';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCartShopping }  from "@fortawesome/free-solid-svg-icons";
+
 
 function Itemcount({stock, onAddToCart, initial}) {
     let [count, setCount] = useState(parseInt(initial))
@@ -29,11 +31,11 @@ function Itemcount({stock, onAddToCart, initial}) {
             </div>
             <div className="item-count__inner">
                 <div className='item-count__minus'>
-                    <FontAwesomeIcon icon="fa-solid fa-minus" onClick={handleSubstract}/>
+                    <button className='item-count__btn'><RemoveIcon onClick={handleSubstract}/></button>
                 </div>
                 <div className='item-count__number'>{count}</div>
                 <div className='item-count__plus'>
-                    <FontAwesomeIcon icon="fa-solid fa-plus" onClick={handleAdd} />
+                    <button className='item-count__btn'><AddIcon onClick={handleAdd} /></button>
                 </div>
             </div>
             <div className='item-count__add-container'>
