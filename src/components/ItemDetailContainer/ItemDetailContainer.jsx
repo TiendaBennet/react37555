@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './itemdetailcontainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail'
-import { getSingleItem } from '../../services/mockAPI'
+import { getSingleItem } from '../../services/firestore'
 import {useParams} from 'react-router-dom'
 import Loader from '../Loader/Loader'
 
@@ -36,6 +36,8 @@ function ItemDetailContainer() {
                 stock={data.stock}
                 price={data.price}
                 descripcion={data.descripcion}
+                categoria={data.categoria}
+                intracategoria={data.intracategoria}
                 />
         </div>
         </> 
