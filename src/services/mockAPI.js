@@ -120,7 +120,7 @@ const data = [{
 
 ];
 
-export default function getItems() {
+export function getItems() {
     return new Promise( (reslove, reject) => {
         setTimeout( () => {
             reslove(data);
@@ -151,7 +151,7 @@ export function getItemsByCategory(cat) { //le creo una nueva funcion
 export function getSingleItem(idItem) { //le creo una nueva funcion 
   return new Promise( (reslove, reject) => {
         let itemFind = data.find((item) => { 
-          return item.id === (idItem);
+          return item.id === parseInt(idItem);
         });
         setTimeout( () => {
  

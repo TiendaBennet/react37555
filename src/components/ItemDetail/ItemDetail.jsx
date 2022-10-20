@@ -8,7 +8,8 @@ import {Link} from 'react-router-dom'
 import { CartContext } from '../../context/CartContext'
 
 function ItemDetail(props) {
-    let [estadoItemDetail, setEstadoItemDetail] = useState(false)
+    {/*Detalle de producto inicializado en 0 items*/}
+    let [estadoItemDetail, setEstadoItemDetail] = useState(false) 
     let { addItem } = useContext(CartContext)
  
     function handleAddToCart(count){
@@ -43,6 +44,7 @@ function ItemDetail(props) {
                     <div>
                         <FontAwesomeIcon className="cartshopping" icon={ faTruckFast } />
                     </div>
+                    {/*Mostrar el contador si falso*/}
                     <div className='item-detail__itemcount'>
                         {estadoItemDetail === false ? <AddToCart stock={props.stock} onAddToCart={handleAddToCart} initial="1"/> : <Link to="/cart" ><button className='item-count__btn-add'> Finalizar compra </button></Link>}
                     </div>

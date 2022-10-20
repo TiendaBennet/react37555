@@ -8,15 +8,19 @@ import Loader from '../Loader/Loader'
 
 function ItemDetailContainer() {
     const [data, setData] = useState({}); 
-    const [error, setError] = useState(false)
+    
+        {/*un estado para el error*/}
+    const [error, setError] = useState(false) 
     const params = useParams()
     const id = params.id
+    {/* Si esta promesa no se resuelve, porque por ej no se encuentra el id, no se cumple la función*/}
     useEffect(() => {
         getSingleItem(id)
             .then((respuestaDatos) => setData(respuestaDatos))
             .catch((errormsg) => setError(errormsg.message))
     }, [id]) 
 
+    {/*Return Temprano - Si esta funcion se da, la próxima (ItemDetail) no, se corta. Entonces, si no hay data title entonces loader*/}
     if (!data.title) { 
         return (
         <div>
@@ -25,6 +29,7 @@ function ItemDetailContainer() {
         ) 
     }
 
+    {/*Si llegan los datos del useEffect, el (!data.title) no se cumple, por ende pasamos a lo siguiente */}
     return (
         <>
             <div className='item-detail__container'>

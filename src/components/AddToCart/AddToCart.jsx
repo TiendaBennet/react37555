@@ -40,6 +40,7 @@ function Itemcount({stock, onAddToCart, initial}) {
             </div>
             <div className='item-count__add-container'>
                 <button className='item-count__btn-add' onClick={() => onAddToCart(count)}>
+                    {/* corregir cosa */}
                     <FontAwesomeIcon icon="fa-solid fa-cart-plus" className='item-count__cart-icon'/>
                      agregar al carrito
                 </button>

@@ -19,7 +19,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const firestore = getFirestore(app)  //conexión a base de datos 
 export async function getItems(){
-    const miColeccion = collection(firestore, 'tiendabennet')
+    const miColeccion = collection(firestore, 'bennethome')
     let snapShotDB = await getDocs(miColeccion) // captura del estado de la base de datos
     let dataDocs = snapShotDB.docs.map((doc) => {
         let docFormateado = {...doc.data(), id: doc.id}
@@ -30,14 +30,14 @@ export async function getItems(){
 }
 
 export async function getSingleItem(idParams){
-    const docRef = doc(firestore, 'tiendabennet', idParams) // referencia al un documento
+    const docRef = doc(firestore, 'bennethome', idParams) // referencia al un documento
     const docSnapshot = await getDoc(docRef)
 
     return {...docSnapshot.data(), id:docSnapshot.id}
 }
 
 export async function getItemsByCategory(catParams) {
-    const collectionRef = collection(firestore, 'tiendabennet')
+    const collectionRef = collection(firestore, 'bennethome')
     const queryCategory = query(collectionRef, where('categoria', '==', catParams))
     const snapShotDB = await getDocs(queryCategory)
 
@@ -49,7 +49,7 @@ export async function getItemsByCategory(catParams) {
 }
 
 export async function getItemsByType(typeParams) {
-    const collectionRef = collection(firestore, 'tiendabennet')
+    const collectionRef = collection(firestore, 'bennethome')
     const queryCategory = query(collectionRef, where('intracategoria', '==', typeParams))
     const snapShotDB = await getDocs(queryCategory)
 

@@ -1,41 +1,11 @@
-import {useEffect, useState} from 'react'
 import Item from "../Item/Item"
-import { getItems, getItemsByCategory, getItemsByType } from "../../services/firestore"
 import './itemlist.css'
-import {useParams} from 'react-router-dom'
 
 import Loader from '../Loader/Loader'
 
-function ItemList(){
-    let [data, setData] = useState([])
-    const [isLoading, setIsLoading] = useState(true)
-    let { cat, type } = useParams()
+{/*el state y params lo pase a listcontainer*/}
 
-    useEffect(()=> {
-        if(cat === undefined ) {
-            getItems()
-                .then( (respuestaDatos) => setData(respuestaDatos))
-                .finally(() => setIsLoading(false))
-        } else {
-            getItemsByCategory(cat)
-                .then((respuestaDatos) =>  setData(respuestaDatos))
-                .finally(() => setIsLoading(false))
-        }
-    }, [cat])
-
-    useEffect(()=> {
-        if(type === undefined ) {
-            getItems()
-            .then( (respuestaDatos) => setData(respuestaDatos))
-            .finally(() => setIsLoading(false))
-        } else {
-            getItemsByType(type)
-                .then((respuestaDatos) =>  setData(respuestaDatos))
-                .finally(() => setIsLoading(false))
-        }
-    }, [type])
-    
-    
+function ItemList({isLoading,data}){
 
     return(
         <div className="item-list__inner">
