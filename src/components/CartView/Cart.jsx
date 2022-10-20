@@ -68,7 +68,10 @@ function Cart() {
                             
                             <div className='cart__goback-container'>
                                 <Link to="/"><button>Regresar a la tienda</button></Link>
-                            </div>  
+                            </div>
+                            <Link to="/checkout">
+                                <button>Terminar mi compra</button>  
+                            </Link>  
                             <button>Terminar mi compra</button>  
                         </div>  
                     </div>
