@@ -95,14 +95,14 @@ const data = [{
   },{
     id:9,
     categoria: "Aberturas",
-    intracategoria: "tablas",
-    sku: "SP250G",
-    denominacion: "Revestimiento Texturado 9mm espesor",
-    title: "Grafito",
-    descripcion:"Tabla Revestimiento PVC por 250mm de ancho. price por ml.",
+    intracategoria: "puertas",
+    sku: "PU073",
+    denominacion: "Puertas plegables 10 mm reforzadas",
+    title: "2 Vidrios Combinada Blanca",
+    descripcion:"Vienen armadas y listas para ser instaladas incluyendo:Guía superior, Marcos Laterales, Manijas, Cierre con traba, Instructivo de colocación",
     price: 900.00,
     stock: 8145,
-    img: "/assets/grafito-resize.jpg"
+    img: "/assets/PU2COMBBLA.jpg"
   },  {
     id:10,
     categoria: "WPC",

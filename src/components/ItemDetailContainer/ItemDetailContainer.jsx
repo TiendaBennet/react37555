@@ -8,8 +8,10 @@ import Loader from '../Loader/Loader'
 
 function ItemDetailContainer() {
     const [data, setData] = useState({}); 
-    
-        {/*un estado para el error*/}
+
+    {/*Clase 04-10 Tecnicas de Rendering*/}
+
+        {/*un estado para el error - es como agregar otra situación a este momento*/}
     const [error, setError] = useState(false) 
     const params = useParams()
     const id = params.id
@@ -21,6 +23,7 @@ function ItemDetailContainer() {
     }, [id]) 
 
     {/*Return Temprano - Si esta funcion se da, la próxima (ItemDetail) no, se corta. Entonces, si no hay data title entonces loader*/}
+    {/* "!" Si no hay data.title se cumple la funcion erronea */}
     if (!data.title) { 
         return (
         <div>

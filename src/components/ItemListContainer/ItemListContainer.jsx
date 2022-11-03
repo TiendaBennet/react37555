@@ -22,6 +22,8 @@ function ItemListContainer() {
             }
         }, [cat])
     
+    {/*El finally que da por rta setIsLoading(false) es para dar terminada la función */}    
+
         useEffect(()=> {
             if(type === undefined ) {
                 getItems()

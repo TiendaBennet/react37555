@@ -23,7 +23,7 @@ function ItemList({isLoading,data}){
                         stock={item.stock}
                         />
                         )
-                    })
+                    }) 
                     }
                     
                 </div>
