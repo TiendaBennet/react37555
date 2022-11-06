@@ -35,13 +35,11 @@ function ItemListContainer() {
                     .finally(() => setIsLoading(false))
             }
         }, [type])
-        {/*Agregue en meet*/}
         console.log(data)
 
     return (
         <div className="item-list__container">
             <main className="item-list__outer">
-                
                 <ItemList data={data} isLoading={isLoading}/>
             </main>
         </div>

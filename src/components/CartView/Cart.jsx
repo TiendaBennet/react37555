@@ -12,16 +12,16 @@ function Cart() {
                 <div className='cart__itemlist-container'>
                     <div className='cart__item-container'>
                         <div className="cart__image-box">
-                            
+                            <p>Imagen</p>
                         </div>
                         <div className="cart__name-box">
-                            <h3 className="nombre--producto">Nombre</h3>
+                            <p>Nombre</p>
                         </div>
                         <div className="cart__quantity-box">
                             <p>Cantidad</p>
                         </div>
                         <div className="cart__price-box">
-                            <p>Precio</p>
+                            <p>Precio Final</p>
                         </div>
                         <div className="cart__remove">
                             
@@ -35,7 +35,7 @@ function Cart() {
                                         <img src={item.img} width='45rem' alt='item'></img>
                                     </div>
                                     <div className="cart__name-box">
-                                        <h3 className="nombre--producto">{item.title}</h3>
+                                        <h4 className="nombre--producto">{item.title}</h4>
                                     </div>
                                     <div className="cart__quantity-box">
                                            <p>{item.cantidad}</p>
@@ -60,19 +60,17 @@ function Cart() {
                     <div className='cart__checkout-container'>
                         <div className='cart__checkout-total'>
                             <h2>Subtotal:</h2>
-                            <h3>{getItemPrice()}</h3>
-                            <h2>Total (más envío):</h2>
-                            <h2>{getItemPrice() + 2000}</h2>
+                            <h3>$ {getItemPrice()}</h3>
+                            <h2>Total (más despacho agencia de transporte):</h2>
+                            <h3>$ {getItemPrice() + 1500}</h3>
                         </div>
-                        <div className='cart__btns'>
-                            
+                        <div className='cart__btns'>    
                             <div className='cart__goback-container'>
                                 <Link to="/"><button>Regresar a la tienda</button></Link>
                             </div>
                             <Link to="/checkout">
                                 <button>Terminar mi compra</button>  
                             </Link>  
-                            <button>Terminar mi compra</button>  
                         </div>  
                     </div>
                 }

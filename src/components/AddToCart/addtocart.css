@@ -67,7 +67,8 @@
     gap: 10px;
 }
 .item-count__btn-add:hover {
-    background-color: rgba(85, 196, 21, 0.973);
+    background-color: rgba(98, 165, 59, 0.973);
+    transform: scale(1.2, 1.2);
 }
 
 .item-count__cart-icon {

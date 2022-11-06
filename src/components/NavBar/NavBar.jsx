@@ -24,13 +24,13 @@ function NavBar() {
                     </li>
                     <li className="nav__sections">
                         <Link to="/">
-                            <h2 className="nav__titles">Busco..</h2>
+                            <h2 className="nav__titles">Buscar</h2>
                         </Link>
                         <ul className="dropdown">
                             <li>working..</li>
                         </ul>
                     </li>
-                    <li className="nav__sections"><Link to="https://github.com/TiendaBennet/react37555"><h2 className="nav__titles">Envíos</h2></Link></li>
+                    <li className="nav__sections"><Link to="https://github.com/TiendaBennet/react37555"><h2 className="nav__titles">Blog</h2></Link></li>
                     <li className="nav__sections"><Link to="https://github.com/TiendaBennet/react37555"><h2 className="nav__titles">Contacto</h2></Link></li>
                     <li className="nav__sections"><Link to="https://github.com/TiendaBennet/react37555"><h2 className="nav__titles">Nosotros</h2></Link></li>
                 </ul>

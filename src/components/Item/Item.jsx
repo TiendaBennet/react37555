@@ -1,6 +1,6 @@
 import "./item.css"
 import {Link} from 'react-router-dom'
-import logo from './../../assetsbennet/logo.png'
+import logo from './../../assetsbennet/logoVerde.png'
 
 function Item(props){
     let {price, title, img, stock} = props
@@ -19,15 +19,20 @@ function Item(props){
                                 <h3 className="card__title">{title}</h3>
                             </div>
                             <div className="card__price-stock-container">
-                                <div className="card__agotado-container">
-                                    <h3 className="card__agotado">{stock === 0 ? 'Agotado' :'' }</h3>
-                                </div>
                                 <div className="card__logo-container">
                                     <img src={logo} alt="logo" className="card__logo"/>
                                 </div>
                                 <div className="card__price-container">
-                                    <h3 className="card__price">{price}</h3>    
+                                    <h3 className="card__price">$ {price}</h3>    
                                 </div>
+                                <div className="card__agotado-container">
+                                        {stock === 0 ? 
+                                            (<h3 className="card__agotado">Agotado</h3>
+                                            ) : (
+                                            <h3 className="card__disponible">¡Quiero ver!</h3>)
+                                        }
+                                </div>
+
                             </div>
                         </div>
                     </div>

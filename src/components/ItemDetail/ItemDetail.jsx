@@ -36,7 +36,7 @@ function ItemDetail(props) {
                 </div>
                 <div className="item-detail__sales-data">
                     <h2 className='item-detail__price'>${props.price}</h2>
-                    <p className='item-detail__envios-p'>Evíos a todo el pais.</p>
+                    <p className='item-detail__envios-p'>Todas las tarjetas disponibles.</p>
                     <div>
                         <FontAwesomeIcon className="cartshopping" icon={ faCreditCard } />                  
                     </div>

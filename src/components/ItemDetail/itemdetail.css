@@ -14,8 +14,6 @@
     grid-template-rows: .2fr 1.5fr.3fr; 
     gap: 0px 0px; 
 }
-
-/* ---- TITULO ---- */
 .item-detail__title-container { 
     grid-area: 1 / 1 / 2 / 4; 
 }
@@ -25,7 +23,6 @@
 
 }
 
-/* --- IMAGENES --- */
 .item-detail__image-container { 
     grid-area: 2 / 1 / 3 / 3; 
     display: flex;
@@ -38,12 +35,13 @@
     
 }
 
-/* ----- INFO DE VENTA ---- */
 .item-detail__sales-data { 
     grid-area: 2 / 4 / 3 / 4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 4px;
+    margin-bottom: 4px;
 }
 .item-detail__price {
     margin-bottom: 2rem;
@@ -52,6 +50,9 @@
     font-size: .8rem;
     font-style: italic;
     text-align: justify;
+    margin-top: 4px;
+    margin-bottom: 4px;
+
 }
 
 
@@ -59,7 +60,6 @@
     margin-top: 1rem;
 }
 
-/* ---- info producto y detalles --- */
 .item-detail__detail-container { 
     grid-area: 3 / 1 / 4 / 3; 
 }

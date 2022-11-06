@@ -64,12 +64,15 @@ h2 {
 
 h3 {
   font-family: sans-serif;
-  color:#ffffff;
-  font-size:1.2rem;
+  color: hsl(240deg 5% 10% / 77%);
+  font-size: 17px;
+  margin-top: 17px;
 }
 
 h4 {
-  color:rgba(81, 86, 72, 0.748)
+  font-family: sans-serif;
+  color: hsl(240deg 5% 10% / 77%);
+  font-size: 17px;
 }
 
 a {
